@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @tarea.titulo %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @tarea.user_id %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @tarea.fecha %>
+</p>
+
+<p>
+  <strong>Cuidad:</strong>
+  <%= @tarea.cuidad %>
+</p>
+
+<p>
+  <strong>Departamento:</strong>
+  <%= @tarea.departamento %>
+</p>
+
+<p>
+  <strong>Barrio:</strong>
+  <%= @tarea.barrio %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @tarea.estado %>
+</p>
+
+<%= link_to 'Edit', edit_tarea_path(@tarea) %> |
+<%= link_to 'Back', tareas_path %>

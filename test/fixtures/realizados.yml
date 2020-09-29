@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  descripcion: MyString
+  fecha_ini: 2020-09-27
+  fecha_fina: 2020-09-27
+  tiempo: 1.5
+  tarea: one
+
+two:
+  descripcion: MyString
+  fecha_ini: 2020-09-27
+  fecha_fina: 2020-09-27
+  tiempo: 1.5
+  tarea: two

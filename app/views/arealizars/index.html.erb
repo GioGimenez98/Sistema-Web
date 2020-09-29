@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+<h1><center>A REALIZAR</center></h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Descripcion</th>
+      <th>Fecha</th>
+      <th>Tiempo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @arealizars.each do |arealizar| %>
+      <tr>
+        <td><%= arealizar.descripcion %></td>
+        <td><%= arealizar.fecha %></td>
+        <td><%= arealizar.tiempo %></td>
+        <td><%= link_to 'Show', arealizar %></td>
+        <td><%= link_to 'Editar', edit_arealizar_path(arealizar), type:'button', class:'btn btn-outline-warning' %></td>
+        <td><%= link_to 'Eliminar', arealizar, method: :delete, data: { confirm: 'Estas seguro de eliminar la tarea?' }, type:'button', class:'btn btn-outline-danger'   %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'CREAR', new_arealizar_path, type:'button', class:'btn btn-primary' %>

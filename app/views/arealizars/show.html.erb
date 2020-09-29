@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @arealizar.descripcion %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @arealizar.fecha %>
+</p>
+
+<p>
+  <strong>Tiempo:</strong>
+  <%= @arealizar.tiempo %>
+</p>
+
+<%= link_to 'Edit', edit_arealizar_path(@arealizar) %> |
+<%= link_to 'Back', arealizars_path %>

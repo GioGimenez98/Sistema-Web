@@ -1,0 +1,42 @@
+<%= form_with(model: realizado, local: true) do |form| %>
+  <% if realizado.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(realizado.errors.count, "error") %> prohibited this realizado from being saved:</h2>
+
+      <ul>
+        <% realizado.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :descripcion %>
+    <%= form.text_field :descripcion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha_ini %>
+    <%= form.date_select :fecha_ini %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha_fina %>
+    <%= form.date_select :fecha_fina %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tiempo %>
+    <%= form.text_field :tiempo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tarea_id %>
+    <%= form.text_field :tarea_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @realizado.descripcion %>
+</p>
+
+<p>
+  <strong>Fecha ini:</strong>
+  <%= @realizado.fecha_ini %>
+</p>
+
+<p>
+  <strong>Fecha fina:</strong>
+  <%= @realizado.fecha_fina %>
+</p>
+
+<p>
+  <strong>Tiempo:</strong>
+  <%= @realizado.tiempo %>
+</p>
+
+<p>
+  <strong>Tarea:</strong>
+  <%= @realizado.tarea_id %>
+</p>
+
+<%= link_to 'Edit', edit_realizado_path(@realizado) %> |
+<%= link_to 'Back', realizados_path %>

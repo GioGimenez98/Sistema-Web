@@ -1,0 +1,2 @@
+class Arealizar < ApplicationRecord
+end

@@ -1,0 +1,32 @@
+<%= form_with(model: arealizar, local: true) do |form| %>
+  <% if arealizar.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(arealizar.errors.count, "error") %> prohibited this arealizar from being saved:</h2>
+
+      <ul>
+        <% arealizar.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :descripcion %>
+    <%= form.text_area :descripcion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha %>
+    <%= form.date_select :fecha %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tiempo %>
+    <%= form.time_select :tiempo %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
