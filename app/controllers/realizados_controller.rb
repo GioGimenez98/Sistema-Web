@@ -15,6 +15,9 @@ class RealizadosController < ApplicationController
   # GET /realizados/new
   def new
     @realizado = Realizado.new
+    @realizado.tarea_id = params[:id] 
+    @titulo = params[:titulo]
+
   end
 
   # GET /realizados/1/edit

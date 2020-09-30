@@ -5,6 +5,7 @@ class TareasController < ApplicationController
   # GET /tareas.json
   def index
     @tareas = Tarea.all
+
   end
 
   # GET /tareas/1

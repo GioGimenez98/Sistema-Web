@@ -21,7 +21,7 @@
         <td><%= realizado.fecha_ini %></td>
         <td><%= realizado.fecha_fina %></td>
         <td><%= realizado.tiempo %></td>
-        <td><%= realizado.tarea_id %></td>
+        <td><%= realizado.tarea.titulo %></td>
         <td><%= link_to 'Show', realizado %></td>
         <td><%= link_to 'Edit', edit_realizado_path(realizado) %></td>
         <td><%= link_to 'Destroy', realizado, method: :delete, data: { confirm: 'Are you sure?' } %></td>

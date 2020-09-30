@@ -12,7 +12,8 @@
       <th>Departamento</th>
       <th>Barrio</th>
       <th>Estado</th>
-      <th colspan="3"></th>
+      <th colspan="4"></th>
+
     </tr>
   </thead>
 
@@ -29,6 +30,7 @@
         <td><%= link_to 'Show', tarea %></td>
         <td><%= link_to 'Edit', edit_tarea_path(tarea) %></td>
         <td><%= link_to 'Destroy', tarea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to "Finalizar ", {:controller => "realizados", :action => "new", :titulo => tarea.titulo, :id => tarea.id}%>
       </tr>
     <% end %>
   </tbody>

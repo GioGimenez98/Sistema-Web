@@ -33,8 +33,12 @@
 
   <div class="field">
     <%= form.label :tarea_id %>
-    <%= form.text_field :tarea_id %>
+    <%= form.text_field :tarea_id, readonly: true %>
   </div>
+  <div class="field">
+  <%= form.label :titulo %>
+  <%= form.text_field :titulo, value:(@titulo), readonly: true %>
+</div>
 
   <div class="actions">
     <%= form.submit %>
