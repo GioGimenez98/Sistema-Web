@@ -1,3 +1,14 @@
-<h1><center>BIENVENIDO </center></h1>
-
-
+<% if user_signed_in? %>
+  <h1><center>Bienvenido <%= current_user.nombre  %></center></h1>
+  <% else %>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <%= link_to "Registrate para una mejor navegacion", new_user_registration_path, class: 'alert alert-warning'  %>
+        </div>
+        <div class="col">
+          <%= link_to "Si ya posees una cuenta Inicia Sesion", new_user_session_path, class: 'alert alert-success' %>
+        </div>
+      </div>
+    </div><br>
+<% end %>

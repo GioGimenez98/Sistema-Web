@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
+<div class="container">
+<h1><center>TAREAS</center></h1>
 
-<h1>Tareas</h1>
-
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
       <th>Titulo</th>
-      <th>User</th>
+      <th>Personal</th>
       <th>Fecha</th>
       <th>Cuidad</th>
       <th>Departamento</th>
@@ -26,11 +26,19 @@
         <td><%= tarea.cuidad %></td>
         <td><%= tarea.departamento %></td>
         <td><%= tarea.barrio %></td>
-        <td><%= tarea.estado %></td>
-        <td><%= link_to 'Show', tarea %></td>
-        <td><%= link_to 'Edit', edit_tarea_path(tarea) %></td>
-        <td><%= link_to 'Destroy', tarea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><%= link_to "Finalizar ", {:controller => "realizados", :action => "new", :titulo => tarea.titulo, :id => tarea.id}%>
+        <td>
+   
+          <div class="badge badge-danger">Pendiente</div>
+        
+          
+          
+        
+          </td>
+       
+        <td><%= link_to "Finalizar ", {:controller => "realizados", :action => "new", :titulo => tarea.titulo, :id => tarea.id} %>
+        <td><%= link_to 'Modificar', edit_tarea_path(tarea),type:'button', class:'btn btn-outline-warning'  %></td>
+        <td><%= link_to 'Eliminar', tarea, method: :delete, data: {confirm: 'Estas seguro?' }, type:'button', class:'btn btn-outline-danger' %></td>
+       
       </tr>
     <% end %>
   </tbody>
@@ -38,4 +46,4 @@
 
 <br>
 
-<%= link_to 'New Tarea', new_tarea_path %>
+<%= link_to 'NUEVA TAREA', new_tarea_path, type:'button', class:'btn btn-primary'%>
