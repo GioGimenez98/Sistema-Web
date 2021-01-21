@@ -10,12 +10,6 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :descripcion %>
-    <%= form.rich_text_area :descripcion %>
-  </div>
-
   <div class="field">
     <%= form.label :fecha_ini %>
     <%= form.date_select :fecha_ini %>
@@ -38,6 +32,11 @@
   <div class="field">
   <%= form.label :titulo %>
   <%= form.text_field :titulo, value:(@titulo), readonly: true %>
+</div>
+
+<div class="field">
+<%= form.label :descripcion %>
+<%= form.rich_text_area :descripcion %>
 </div>
 
   <div class="actions">

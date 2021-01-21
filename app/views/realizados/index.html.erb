@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 <div class="container">
 <h1><center>REALIZADOS</center></h1>
-
-<table class="table table-hover">
+<div class="table-responsive-sm">
+<table class="table">
   <thead>
     <tr>
       <th>Descripcion</th>
@@ -31,7 +31,7 @@
     <% end %>
   </tbody>
 </table>
-
+</div>
 <br>
 
 <%= link_to 'NUEVO REALIZACIÓN', new_realizado_path, type:'button', class:'btn btn-primary' %>
