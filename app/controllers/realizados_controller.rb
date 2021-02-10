@@ -17,7 +17,9 @@ class RealizadosController < ApplicationController
     @realizado = Realizado.new
     @realizado.tarea_id = params[:id] 
     @titulo = params[:titulo]
-
+    tarea = Tarea.find_by(id: params[:id])
+    tarea.estado=true 
+    tarea.save
   end
 
   # GET /realizados/1/edit

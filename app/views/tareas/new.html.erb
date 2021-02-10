@@ -1,5 +1,7 @@
-<h1>Nueva Tarea</h1>
-<%= @tarea_id %>
-<%= render 'form', tarea: @tarea %>
+<div class="container">
+    <center><h1>Nueva Tarea</h1></center>
+        <%= @tarea_id %>
+    <%= render 'form', tarea: @tarea %>
 
-<%= link_to 'Back', tareas_path %>
+    <%= link_to 'Volver', tareas_path%>
+</div>

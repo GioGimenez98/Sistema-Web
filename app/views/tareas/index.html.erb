@@ -28,8 +28,12 @@
         <td><%= tarea.barrio %></td>
         <td>
    
-          <div class="badge badge-danger">Pendiente</div>
-        
+          
+          <% if tarea.estado == false %>
+              <div class="badge badge-danger">Pendiente</div>
+          <% else %>
+            <div class="badge badge-success">Realzado</div>
+          <% end %>
           
           
         

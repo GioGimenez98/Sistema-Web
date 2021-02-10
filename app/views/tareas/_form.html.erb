@@ -10,44 +10,68 @@
       </ul>
     </div>
   <% end %>
+<div class="container">
+    <div class="form-group row">
+      <%= form.label :titulo, 'Titulo:', class:'col-sm-2 col-form-label' %>
+    <div class="col-sm-6">
+      <%= form.text_field :titulo, class: 'form-control', type:'text', placeholder:'Titulo de la Tarea' %>
+    </div>
+    </div>
 
-  <div class="field">
-    <%= form.label :titulo %>
-    <%= form.text_field :titulo %>
+  
+  <div class="form-group row">
+    <%= form.label :user_id, 'Asignada a:',  class:'col-sm-2 col-form-label' %>
+    <div class="col-sm-4">
+      <%= form.collection_select :user_id, User.all, :id, :nombre, {}, { class: 'form-control' }%>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.collection_select :user_id, User.all, :id, :name %>
 
+
+<div class="form-group row">
+    <%= form.label :fecha,  class:'col-sm-2 col-form-label'   %>
+    <div class="col-sm-6">
+    <%= form.date_field :fecha, class: 'form-control' %>
+  </div>
   </div>
 
-  <div class="field">
-    <%= form.label :fecha %>
-    <%= form.date_select :fecha %>
+  <div class="form-group row">
+  <%= form.label :cuidad, 'Cuidad:', class:'col-sm-2 col-form-label' %>
+<div class="col-sm-6">
+  <%= form.text_field :cuidad, class: 'form-control', type:'text', placeholder:'Cuidad' %>
+</div>
+</div>
+
+<div class="form-group row">
+      <%= form.label :departamento, 'Departamento:', class:'col-sm-2 col-form-label' %>
+    <div class="col-sm-6">
+      <%= form.text_field :departamento, class: 'form-control', type:'text', placeholder:'Departamento' %>
+    </div>
+    </div>
+
+    <div class="form-group row">
+    <%= form.label :barrio, 'Barrio:', class:'col-sm-2 col-form-label' %>
+  <div class="col-sm-6">
+    <%= form.text_field :barrio, class: 'form-control', type:'text', placeholder:'Barrio' %>
+  </div>
   </div>
 
-  <div class="field">
-    <%= form.label :cuidad %>
-    <%= form.text_field :cuidad %>
+  <div class="form-group row">
+  <%= form.label :estado, class:'col-sm-2 col-form-label'%>
+  <div class="col-sm-10">
+  <div class="form-check">
+   
+    
+    <%= form.check_box :estado%>
+    <label class="form-check-label" for="gridCheck1">
+         Activar para que el estado este en Pendiente 
+    </label>
   </div>
-
-  <div class="field">
-    <%= form.label :departamento %>
-    <%= form.text_field :departamento %>
   </div>
-
-  <div class="field">
-    <%= form.label :barrio %>
-    <%= form.text_field :barrio %>
-  </div>
-
-  <div class="field">
-    <%= form.label :estado %>
-    <%= form.check_box :estado %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
-  </div>
+    <%= form.submit "Crear Tarea", class: 'btn btn-primary' %><br>
+</div>
+</div>
 <% end %>

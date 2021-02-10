@@ -10,29 +10,41 @@
       </ul>
     </div>
   <% end %>
-  <div class="field">
-    <%= form.label :fecha_ini %>
-    <%= form.date_select :fecha_ini %>
-  </div>
-
-  <div class="field">
-    <%= form.label :fecha_fina %>
-    <%= form.date_select :fecha_fina %>
-  </div>
-
-  <div class="field">
-    <%= form.label :tiempo %>
-    <%= form.text_field :tiempo %>
-  </div>
-
-  <div class="field">
-    <%= form.label :tarea_id %>
-    <%= form.text_field :tarea_id, readonly: true %>
-  </div>
-  <div class="field">
-  <%= form.label :titulo %>
-  <%= form.text_field :titulo, value:(@titulo), readonly: true %>
+  <div class="container">
+  <div class="form-group row">
+  <%= form.label :fecha_ini,  class:'col-sm-2 col-form-label'   %>
+  <div class="col-sm-6">
+  <%= form.date_field :fecha_ini, class: 'form-control' %>
 </div>
+</div>
+
+<div class="form-group row">
+    <%= form.label :fecha_fina,  class:'col-sm-2 col-form-label'   %>
+    <div class="col-sm-6">
+    <%= form.date_field :fecha_fina, class: 'form-control' %>
+  </div>
+  </div>
+
+  <div class="form-group row">
+    <%= form.label :tiempo, 'Tiempo:', class:'col-sm-2 col-form-label' %>
+    <div class="col-sm-6">
+      <%= form.text_field :tiempo, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <%= form.label :tarea_id, 'Tarea:', class:'col-sm-2 col-form-label' %>
+    <div class="col-sm-6">
+      <%= form.text_field :tarea_id, class: 'form-control', readonly: true %>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <%= form.label :titulo, 'Titulo:', class:'col-sm-2 col-form-label' %>
+    <div class="col-sm-6">
+      <%= form.text_field :titulo, class: 'form-control', value:(@titulo), readonly: true %>
+    </div>
+  </div>
 
 <div class="field">
 <%= form.label :descripcion %>
@@ -40,6 +52,7 @@
 </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Finalizar", class: 'btn btn-primary' %>
   </div>
+</div>  
 <% end %>
