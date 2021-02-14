@@ -12,14 +12,14 @@
   <% end %>
   <div class="container">
   <div class="form-group row">
-  <%= form.label :fecha_ini,  class:'col-sm-2 col-form-label'   %>
+  <%= form.label :fecha_ini, 'Fecha Inicio',  class:'col-sm-2 col-form-label'   %>
   <div class="col-sm-6">
   <%= form.date_field :fecha_ini, class: 'form-control' %>
 </div>
 </div>
 
 <div class="form-group row">
-    <%= form.label :fecha_fina,  class:'col-sm-2 col-form-label'   %>
+    <%= form.label :fecha_fina, 'Fecha Finalización',  class:'col-sm-2 col-form-label'   %>
     <div class="col-sm-6">
     <%= form.date_field :fecha_fina, class: 'form-control' %>
   </div>
@@ -52,7 +52,7 @@
 </div>
 
   <div class="actions">
-    <%= form.submit "Finalizar", class: 'btn btn-primary' %>
+    <%= form.submit "Finalizar", class: 'btn btn-primary' %> 
   </div>
 </div>  
 <% end %>

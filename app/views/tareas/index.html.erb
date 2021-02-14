@@ -32,14 +32,14 @@
           <% if tarea.estado == false %>
               <div class="badge badge-danger">Pendiente</div>
           <% else %>
-            <div class="badge badge-success">Realzado</div>
+            <div class="badge badge-success">Realizado</div>
           <% end %>
           
           
         
           </td>
        
-        <td><%= link_to "Finalizar ", {:controller => "realizados", :action => "new", :titulo => tarea.titulo, :id => tarea.id} %>
+        <td><%= link_to "Finalizar ", {:controller => "realizados", :action => "new", :titulo => tarea.titulo, :id => tarea.id},type:'button', class:'btn btn-info' %>
         <td><%= link_to 'Modificar', edit_tarea_path(tarea),type:'button', class:'btn btn-outline-warning'  %></td>
         <td><%= link_to 'Eliminar', tarea, method: :delete, data: {confirm: 'Estas seguro?' }, type:'button', class:'btn btn-outline-danger' %></td>
        

@@ -1,18 +1,18 @@
 <p id="notice"><%= notice %></p>
 <div class="container">
-<h1><center>REALIZADOS</center></h1>
+<h1><center>TAREAS FINALIZADAS</center></h1>
 <div class="table-responsive-sm">
 <table class="table" id="dttb">
   <thead>
     <tr>
+      <th>Tarea</th>
       <th>Descripcion</th>
+      <th>Usuario</th>
       <th>Fecha Inicio</th>
+      <th>Barrio</th>
       <th>Fecha Final</th>
       <th>Tiempo</th>
-      <th>Tarea</th>
       <th>Estado</th>
-      <th></th>
-      <th></th>
       <th></th>
     </tr>
   </thead>
@@ -20,13 +20,15 @@
   <tbody>
     <% @realizados.each do |realizado| %>
       <tr>
+      <td><%= realizado.tarea.titulo %></td>
         <td><%= realizado.descripcion %></td>
+        <td></td>
         <td><%= realizado.fecha_ini %></td>
+        <td></td>
         <td><%= realizado.fecha_fina %></td>
         <td><%= realizado.tiempo %></td>
-        <td><%= realizado.tarea.titulo %></td>
         <td>  <div class="badge badge-success">Realizado</div></td>
-        <td><%= link_to 'Show', realizado %></td>
+        <td><%= link_to 'Ver', realizado %></td>
         <td><%= link_to 'Modificar', edit_realizado_path(realizado),type:'button', class:'btn btn-outline-warning' %></td>
         <td><%= link_to 'Eliminar', realizado, method: :delete, data: {confirm: 'Estas seguro?' }, type:'button', class:'btn btn-outline-danger'%></td>
       </tr>
@@ -36,4 +38,4 @@
 </div>
 <br>
 
-<%= link_to 'NUEVO REALIZACIÓN', new_realizado_path, type:'button', class:'btn btn-primary' %>
+

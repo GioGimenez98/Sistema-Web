@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   resources :tareas
   devise_for :users
   resources :arealizars
-  resources :tareas 
+  resources :tareas
+  resources :estadisticas 
   get 'home/index'
   get 'estadisticas/index'
   root to: "home#index"
